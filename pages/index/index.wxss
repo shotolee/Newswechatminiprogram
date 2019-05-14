@@ -1,1 +1,26 @@
 /**index.wxss**/
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: dodgerblue;
+  height: 88rpx;
+}
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 100rpx;
+}
+.nav-item {
+  font-size: 30rpx;
+  color:  white;
+  text-align: center;
+  margin-bottom: 10rpx;
+  opacity: 0.9;
+}
+.nav-active {
+  height: 2rpx;
+  width: 30rpx;
+  margin-left: 35rpx;
+  background-color: white;
+}
