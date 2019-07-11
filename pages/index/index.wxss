@@ -1,90 +1,151 @@
 /**index.wxss**/
+
 .navbar {
-  display: flex;
-  align-items: center;
-  background-color: dodgerblue;
-  height: 88rpx;
+    display: flex;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+    align-items: center;
+    background-color: rgb(60, 160, 225);
+    height: 88rpx;
 }
+
 .nav-list {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  width: 100rpx;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 100rpx;
 }
+
 .nav-item {
-  font-size: 30rpx;
-  color:  white;
-  text-align: center;
-  margin-bottom: 10rpx;
-  opacity: 0.9;
+    font-size: 30rpx;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 10rpx;
+    opacity: 0.9;
 }
+
+
+/* 导航栏选中状态下的样式 */
+
+.nav-itemactive {
+    font-size: 30rpx;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 10rpx;
+}
+
 .nav-active {
-  height: 2rpx;
-  width: 30rpx;
-  margin-left: 35rpx;
-  background-color: white;
+    height: 2rpx;
+    width: 30rpx;
+    margin-left: 35rpx;
+    background-color: white;
 }
 
 .firstnews {
-  position: absolute;
-  box-sizing: border-box;
-  padding-top: 200rpx;
-  padding-bottom: 50rpx;
-  padding-left: 20rpx;
-  padding-right: 20rpx;
-  width: 100%;
+    position: relative;
+    padding-top: 280rpx;
+    padding-bottom: 50rpx;
+    padding-left: 50rpx;
+    padding-right: 50rpx;
+}
 
-  /* height:  300rpx; */
+
+/* 有一个奇怪的边框 */
+
+.firstnews-haveaborder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 690rpx;
+    height: 410rpx;
+    border: 30rpx solid rgba(250, 250, 250, 0.9);
+    z-index: 1;
 }
 
 .firstnews-title {
-  margin-bottom: 14rpx;
-  font-size: 32rpx;
-  line-height: 44rpx;
-  font-weight: 900;
-  color: white;
+    margin-bottom: 10rpx;
+    font-size: 32rpx;
+    line-height: 44rpx;
+    font-weight: 900;
+    color: white;
 }
 
-.firstnews-fandt {
-  display: flex;
-  font-size: 26rpx;
-  line-height:36rpx;
-  color: white;
-  opacity: 0.8;
+.firstnews-f-and-t {
+    display: flex;
+    font-size: 26rpx;
+    line-height: 36rpx;
+    color: white;
+    opacity: 0.85;
 }
+
 .firstnews-from {
-  margin-right: 30rpx;
+    margin-right: 30rpx;
 }
 
 .firstnews-tag {
-  position: absolute;
-  right: 10rpx;
-  top: 0rpx;
-  width:  100rpx;
-  height:  50rpx;
-  background-color: rgba(255, 0, 0, 0.3);
-  text-align: center;
-  align-content: center;
-  font-size: 26rpx;
-  font-weight: 700;
-  line-height: 36rpx;
-  color: white;
-
+    position: absolute;
+    right: 30rpx;
+    top: 30rpx;
+    padding-top: 6rpx;
+    padding-right: 12rpx;
+    width: 80rpx;
+    height: 44rpx;
+    border-radius: 0 0 0 30rpx;
+    background-color: rgba(255, 0, 0, 0.4);
+    text-align: right;
+    align-content: center;
+    font-size: 26rpx;
+    font-weight: 700;
+    line-height: 36rpx;
+    color: white;
 }
 
 .firstnews-pic {
-  position: absolute;
-  top:0;
-  left:0;
-  width: 100%;
-  height: 360rpx;
-  z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 470rpx;
+    z-index: -1;
 }
 
 
-.news {
-  position: absolute;
+/* 下部新闻列表 */
+
+.news-list {
+    display: flex;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    padding: 30rpx 0 30rpx 0;
+    border-bottom: 1rpx solid #d8d8d8;
 }
-.news title {
-  position: absolute;
+
+.news-outline {
+    width: 500rpx;
+}
+
+.news-title {
+    padding-right: 4rpx;
+    font-size: 32rpx;
+    line-height: 44rpx;
+    opacity: 0.9;
+}
+
+.news-attribute {
+    display: flex;
+    margin-top: 6rpx;
+    font-size: 24rpx;
+    line-height: 34rpx;
+    opacity: 0.6;
+}
+
+.news-from {
+    margin-right: 30rpx;
+}
+
+.news-pic {
+    position: relative;
+    width: 200rpx;
+    height: auto;
 }

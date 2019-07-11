@@ -9,65 +9,24 @@
 </view>
 <!-- 以下是读取的新闻列表 -->
 <view class="firstnews">
-  <view class="firstnews-title">官湖村陈生：上北大车票是乡亲凑的，赠别野遇尴尬两年没回乡</view>
-  <view class="firstnews-fandt">
-    <view class="firstnews-from">上海新闻</view>
-    <view class="firstnews-time">10:22</view>
-  </view>
-  <view class="firstnews-tag">热门</view>
+  <view class="firstnews-haveaborder"></view>
+    <view class="firstnews-title">官湖村陈生：上北大车票是乡亲凑的，赠别野遇尴尬两年没回乡</view>
+    <view class="firstnews-f-and-t">
+      <view class="firstnews-from">上海新闻</view>
+      <view class="firstnews-time">10:22</view>
+    </view>
+    <view class="firstnews-tag">热门</view>
+
   <image class="firstnews-pic" src='/images/temp.jpg' mode = "scaleToFill"></image>
 </view>
-<!-- <view class="news">
-  <view class="news-title">陈每尔：拥抱新时代，践行新思想实现新作为</view>
-  <view class="news-form">人民日报</view>
-  <view class="news-time">4:04</view>
+
+<view class="news-list">
+  <view class="news-outline">
+    <view class="news-title">陈每尔：拥 抱新时代，践行新思想实现新作样的围</view>
+    <view class="news-attribute">
+      <view class="news-from">人民日报</view>
+      <view class="news-time">4:04</view>
+    </view>
+  </view>
   <image class="news-pic" src='/images/firstnewstemp.jpg'></image>
 </view>
-<view class="news">
-  <view class="news-title">陈每尔：拥抱新时代，践行新思想实现新作为</view>
-  <view class="news-form">人民日报</view>
-  <view class="news-time">4:04</view>
-  <image class="news-pic" src='/images/firstnewstemp.jpg'></image>
-</view>
-<view class="news">
-  <view class="news-title">陈每尔：拥抱新时代，践行新思想实现新作为</view>
-  <view class="news-form">人民日报</view>
-  <view class="news-time">4:04</view>
-  <image class="news-pic" src='/images/firstnewstemp.jpg'></image>
-</view>
-<view class="news">
-  <view class="news-title">陈每尔：拥抱新时代，践行新思想实现新作为</view>
-  <view class="news-form">人民日报</view>
-  <view class="news-time">4:04</view>
-  <image class="news-pic" src='/images/firstnewstemp.jpg'></image>
-</view>
-<view class="news">
-  <view class="news-title">陈每尔：拥抱新时代，践行新思想实现新作为</view>
-  <view class="news-form">人民日报</view>
-  <view class="news-time">4:04</view>
-  <image class="news-pic" src='/images/firstnewstemp.jpg'></image>
-</view>
-<view class="news">
-  <view class="news-title">陈每尔：拥抱新时代，践行新思想实现新作为</view>
-  <view class="news-form">人民日报</view>
-  <view class="news-time">4:04</view>
-  <image class="news-pic" src='/images/firstnewstemp.jpg'></image>
-</view>
-<view class="news">
-  <view class="news-title">陈每尔：拥抱新时代，践行新思想实现新作为</view>
-  <view class="news-form">人民日报</view>
-  <view class="news-time">4:04</view>
-  <image class="news-pic" src='/images/firstnewstemp.jpg'></image>
-</view>
-<view class="news">
-  <view class="news-title">陈每尔：拥抱新时代，践行新思想实现新作为</view>
-  <view class="news-form">人民日报</view>
-  <view class="news-time">4:04</view>
-  <image class="news-pic" src='/images/firstnewstemp.jpg'></image>
-</view>
-<view class="news">
-  <view class="news-title">陈每尔：拥抱新时代，践行新思想实现新作为</view>
-  <view class="news-form">人民日报</view>
-  <view class="news-time">4:04</view>
-  <image class="news-pic" src='/images/firstnewstemp.jpg'></image>
-</view> -->
