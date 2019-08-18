@@ -9,7 +9,7 @@ Page({
     firstnewsTitle: '',
     firstnewsSource: '',
     firstnewsTime: '',
-    firstnewsId: '',
+    id: '',
     firstnewsImage: '/images/default.gif' //默认图片
   },
   onPullDownRefresh(){
@@ -34,13 +34,13 @@ Page({
         let firstnewsTitle
         let firstnewsSource
         let firstnewsTime
-        let firstnewsId
+        let id
         let firstnewsImage
         //利用循环读取新闻内容
         for (let i = 0; i < result.length; i += 1) {
           // 第一条新闻内容给热门
           if (i == 0) {
-            firstnewsId = result[0].id,
+            id = result[0].id,
             firstnewsTitle = result[0].title,
             firstnewsSource = result[0].source,
             firstnewsTime = util.formatTime(result[0].date),
@@ -55,13 +55,14 @@ Page({
             })
           }
         }
+        console.log(result)
       //更新页面数据
         this.setData({
           //第一条热门新闻
           firstnewsTitle: firstnewsTitle,
           firstnewsSource: firstnewsSource,
           firstnewsTime: firstnewsTime,
-          firstnewsId: firstnewsId,
+          id: id,
           firstnewsImage: firstnewsImage,
           //下部列表，第 2 条至最结束
           news: news
@@ -75,7 +76,7 @@ Page({
   },
   onTapNews() {
     wx.navigateTo({
-      url: '/pages/news/news',
+      url: '/pages/news/news?id=' + this.data.id,
     })
   }
 })

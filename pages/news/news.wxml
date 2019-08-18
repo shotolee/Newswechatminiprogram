@@ -1,0 +1,17 @@
+<!--pages/news/news.wxml-->
+<view class="newstitle">{{newstitle}}</view>
+<view class="newsinfo">
+  <view class="newsinfo-from">{{newssource}}</view>
+  <view class="newsinfo-time">{{newsdata}}</view>
+  <view class="newsinfo-read">阅读 {{newsreadCount}}</view>
+</view>
+<view class="newsbody">
+<image src="{{newsfirstImage}}"></image>
+<p>
+新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页
+</p>
+<image src="/images/firstnewstemp.jpg"></image>
+<p>
+新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页
+</p>
+</view>
