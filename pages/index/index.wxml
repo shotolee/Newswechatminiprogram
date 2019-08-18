@@ -5,24 +5,29 @@
     <view class='nav-active'> </view>
   </view>
 </view>
-<view class="firstnews" bindtap='onTapNews'>
+<view wx:for="{{news}}">
+<block wx:if="{{ index == 0 }}">
+<view class="firstnews" bindtap='onTapNews' id="{{item.id}}">
   <view class="firstnews-haveaborder"></view>
-    <view class="firstnews-title">{{ firstnewsTitle }}</view>
+    <view class="firstnews-title">{{ item.title }}</view>
     <view class="firstnews-f-and-t">
-      <view class="firstnews-from">{{ firstnewsSource }}</view>
-      <view class="firstnews-time">{{ firstnewsTime }}</view>
+      <view class="firstnews-from">{{ item.source }}</view>
+      <view class="firstnews-time">{{ item.time }}</view>
     </view>
     <view class="firstnews-tag">热门</view>
-  <image class="firstnews-pic" src='{{ firstnewsImage }}' mode = "scaleToFill"></image>
+  <image class="firstnews-pic" src='{{ item.firstImage }}' mode = "scaleToFill"></image>
 </view>
-
-<view wx:for="{{news}}" class="news-list" bindtap='onTapNews'>
-  <view class="news-outline">
-    <view class="news-title">{{item.title}}</view>
-    <view class="news-attribute">
-      <view class="news-from">{{item.source}}</view>
-      <view class="news-time">{{item.time}}</view>
+</block>
+<block wx:else>
+  <view class="news-list" bindtap='onTapNews' id="{{item.id}}">
+    <view class="news-outline">
+      <view class="news-title">{{item.title}}</view>
+      <view class="news-attribute">
+        <view class="news-from">{{item.source}}</view>
+        <view class="news-time">{{item.time}}</view>
+      </view>
     </view>
+    <image class="news-pic" src="{{item.firstImage}}"></image>
   </view>
-  <image class="news-pic" src="{{item.firstImage}}"></image>
+</block>
 </view>
