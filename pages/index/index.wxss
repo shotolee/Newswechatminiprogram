@@ -141,7 +141,7 @@
 }
 
 .news-from {
-    margin-right: 0rpx;
+    margin-right: 30rpx;
 }
 
 .news-pic {

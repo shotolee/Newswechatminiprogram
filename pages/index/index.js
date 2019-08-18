@@ -1,5 +1,5 @@
 //引用时间处理
-import appUtil from '../../utils/util.js';
+var util = require('../../utils/util.js');
 
 Page({
   data: {
@@ -43,19 +43,19 @@ Page({
             firstnewsId = result[0].id,
             firstnewsTitle = result[0].title,
             firstnewsSource = result[0].source,
-            firstnewsTime = result[0].date,
+            firstnewsTime = util.formatTime(result[0].date),
             firstnewsImage = result[0].firstImage
           }  else {
             news.push({
               id: result[i].id,
               title: result[i].title,
-              time: result[i].date,
+              time: util.formatTime(result[i].date),
               source: result[i].source,
-              firstImage: result[i].firstImage,
+              firstImage: result[i].firstImage
             })
           }
         }
-        //console.log(firstnewsTime.getTime())
+          console.log(new Date().getMonth()+1)
       //更新页面数据
         this.setData({
           //第一条热门新闻
