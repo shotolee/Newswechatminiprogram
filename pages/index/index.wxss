@@ -48,6 +48,7 @@
     padding-bottom: 50rpx;
     padding-left: 50rpx;
     padding-right: 50rpx;
+    height: 140rpx;
 }
 
 

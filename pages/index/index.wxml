@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class='navbar'>
   <view class="nav-list" wx:for="{{forecast}}">
-    <view class='nav-item'>{{item}}</view>
-    <view class='nav-active'> </view>
+    <view class='nav-item' bindtap='onTapType' id="{{item.type}}">{{item.name}}</view>
+    <view wx:if="{{item.type == type}}" class='nav-active'> </view>
   </view>
 </view>
 <view wx:for="{{news}}">

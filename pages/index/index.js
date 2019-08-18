@@ -3,25 +3,27 @@ var util = require('../../utils/util.js');
 
 Page({
   data: {
-    forecast: ['国内', '国际', '财经', '娱乐', '军事', '体育', '其他'] ,
-    news: [], //下部的新闻列表
-    //id: '',
-    firstnewsImage: '/images/default.gif' //默认图片
+    forecast: [{name: '国内', type: 'gn'}, {name: '国际', type: 'gj'}, {name: '财经', type: 'cj'}, {name: '娱乐', type: 'yl'}, {name: '军事', type:'js'}, {name: '体育', type: 'ty'}, {name: '其他', type: 'other'}] ,
+    type: 'cj',
+    news: [], 
+  //  firstnewsImage: '/images/default.gif' //默认图片
   },
+
   onPullDownRefresh(){
     this.getNews(()=>{
       wx.stopPullDownRefresh()
     })
   },
+
   onLoad() {
     this.getNews()
   },
-  
+
   getNews(callback){
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list', //接口调用
       data: {
-        type: 'gn',
+        type: this.data.type,
       },
         success:res => {
         let result = res.data.result
@@ -47,6 +49,14 @@ Page({
         callback && callback()
       }
     })
+  },
+
+  onTapType(event){
+     this.setData({
+       type: event.currentTarget.id
+     })
+    this.getNews()
+
   },
   onTapNews(event) {
     wx.navigateTo({
