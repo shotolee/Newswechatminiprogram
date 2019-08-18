@@ -55,7 +55,6 @@ Page({
             })
           }
         }
-          console.log(new Date().getMonth()+1)
       //更新页面数据
         this.setData({
           //第一条热门新闻
@@ -72,6 +71,11 @@ Page({
       complete: ()=>{
         callback && callback()
       }
+    })
+  },
+  onTapNews() {
+    wx.navigateTo({
+      url: '/pages/news/news',
     })
   }
 })

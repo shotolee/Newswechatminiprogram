@@ -5,7 +5,7 @@
     <view class='nav-active'> </view>
   </view>
 </view>
-<view class="firstnews">
+<view class="firstnews" bindtap='onTapNews'>
   <view class="firstnews-haveaborder"></view>
     <view class="firstnews-title">{{ firstnewsTitle }}</view>
     <view class="firstnews-f-and-t">
@@ -16,7 +16,7 @@
   <image class="firstnews-pic" src='{{ firstnewsImage }}' mode = "scaleToFill"></image>
 </view>
 
-<view wx:for="{{news}}" class="news-list">
+<view wx:for="{{news}}" class="news-list" bindtap='onTapNews'>
   <view class="news-outline">
     <view class="news-title">{{item.title}}</view>
     <view class="news-attribute">
