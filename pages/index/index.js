@@ -4,9 +4,8 @@ var util = require('../../utils/util.js');
 Page({
   data: {
     forecast: [{name: '国内', type: 'gn'}, {name: '国际', type: 'gj'}, {name: '财经', type: 'cj'}, {name: '娱乐', type: 'yl'}, {name: '军事', type:'js'}, {name: '体育', type: 'ty'}, {name: '其他', type: 'other'}] ,
-    type: 'cj',
-    news: [], 
-  //  firstnewsImage: '/images/default.gif' //默认图片
+    type: 'gn',
+    news: [],
   },
 
   onPullDownRefresh(){
@@ -31,6 +30,7 @@ Page({
         let news = []
         //利用循环读取新闻内容
         for (let i = 0; i < result.length; i += 1) {
+          if (result[i].firstImage != undefined) {
             news.push({
               id: result[i].id,
               title: result[i].title,
@@ -38,7 +38,16 @@ Page({
               source: result[i].source,
               firstImage: result[i].firstImage
             })
-          }
+          } else {
+              news.push({
+                id: result[i].id,
+                title: result[i].title,
+                time: util.formatTime(result[i].date),
+                source: result[i].source,
+                firstImage: '/images/default.gif'
+              })
+           }
+        }
       //更新页面数据
         this.setData({
           news: news

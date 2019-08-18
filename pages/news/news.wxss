@@ -2,7 +2,7 @@
 .newstitle {
   font-size: 46rpx;
   line-height: 64rpx;
-  opacity: 0.8;
+  color:  #353535;
   margin-top: 50rpx;
   margin-left:30rpx;
   margin-right:30rpx;
@@ -17,7 +17,7 @@
   margin-bottom: 60rpx;
   font-size: 26rpx;
   line-height: 36rpx;
-  opacity: 0.5;
+  color: #888888;
 }
 
 .newsinfo-from {
@@ -38,8 +38,8 @@
   margin-left: 30rpx;
   margin-right: 30rpx;
   font-size: 28rpx;
-  line-height: 46rpx;
-  opacity: 0.65;
+  line-height: 48rpx;
+  color: #353535;
 }
 
 .newsbody image {

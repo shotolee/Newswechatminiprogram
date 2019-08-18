@@ -5,6 +5,7 @@
     <view wx:if="{{item.type == type}}" class='nav-active'> </view>
   </view>
 </view>
+
 <view wx:for="{{news}}">
 <block wx:if="{{ index == 0 }}">
 <view class="firstnews" bindtap='onTapNews' id="{{item.id}}">
