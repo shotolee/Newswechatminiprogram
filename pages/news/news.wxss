@@ -44,6 +44,9 @@
 
 .newsbody image {
   width: 100%;
-  margin-top: 40rpx;
   margin-bottom: 40rpx;
+}
+
+.p {
+  padding-bottom: 40rpx;
 }

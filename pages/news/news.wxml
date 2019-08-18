@@ -6,12 +6,12 @@
   <view class="newsinfo-read">阅读 {{newsreadCount}}</view>
 </view>
 <view class="newsbody">
-<image src="{{newsfirstImage}}"></image>
-<p>
-新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页
-</p>
-<image src="/images/firstnewstemp.jpg"></image>
-<p>
-新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页新闻内容页
-</p>
+  <view wx:for="{{newsbody}}">
+    <block wx:if="{{item.type == 'p'}}">
+      <view class="p">{{item.text}}</view>
+    </block>
+    <block wx:else>
+      <image src="{{item.src}}" mode="widthFix"></image>
+    </block>
+  </view>
 </view>
