@@ -1,17 +1,20 @@
 <!--pages/news/news.wxml-->
 <view class="newstitle">{{newstitle}}</view>
 <view class="newsinfo">
-  <view class="newsinfo-from">{{newssource}}</view>
+  <view wx:if="{{newssource != Null || newssource != undefined || newssource == ''}}" class="newsinfo-from">{{ newssource }}</view>
+  <view wx:else class="newsinfo-from">{{ defaultSource }}</view>
   <view class="newsinfo-time">{{newsdata}}</view>
   <view class="newsinfo-read">阅读 {{newsreadCount}}</view>
 </view>
 <view class="newsbody">
   <view wx:for="{{newsbody}}">
-    <block wx:if="{{item.type == 'p'}}">
-      <view class="p">{{item.text}}</view>
-    </block>
-    <block wx:else>
+    <view wx:if="{{item.type =='p'}}" class="p">{{item.text}}</view>
+    <view wx:if="{{item.type =='strong'}}" class="p-strong">{{item.text}}</view>
+    <view wx:if="{{item.type =='image'}}">
       <image src="{{item.src}}" mode="widthFix"></image>
-    </block>
+    </view>
+    <!-- <block wx:else>
+      <image src="{{item.src}}" mode="widthFix"></image>
+    </block> -->
   </view>
 </view>

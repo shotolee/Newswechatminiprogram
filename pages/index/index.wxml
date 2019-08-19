@@ -12,11 +12,17 @@
   <view class="firstnews-haveaborder"></view>
     <view class="firstnews-title">{{ item.title }}</view>
     <view class="firstnews-f-and-t">
-      <view class="firstnews-from">{{ item.source }}</view>
+      <view wx:if="{{item.source != Null || item.source != undefined || item.source == ''}}" class="firstnews-from">{{ item.source }}</view>
+      <view wx:else class="firstnews-from">{{ defaultSource }}</view>
       <view class="firstnews-time">{{ item.time }}</view>
     </view>
     <view class="firstnews-tag">热门</view>
-  <image class="firstnews-pic" src='{{ item.firstImage }}' mode = "scaleToFill"></image>
+  <view wx:if="{{item.firstImage != Null || item.firstImage != undefined || item.firstImage == ''}}">
+    <image class="firstnews-pic" src='{{ item.firstImage }}' mode = "scaleToFill"></image>
+  </view>
+  <view wx:else>
+    <image class="firstnews-pic" src='{{defaultImage}}' mode = "scaleToFill"></image>
+  </view>
 </view>
 </block>
 <block wx:else>
@@ -24,11 +30,17 @@
     <view class="news-outline">
       <view class="news-title">{{item.title}}</view>
       <view class="news-attribute">
-        <view class="news-from">{{item.source}}</view>
+        <view wx:if="{{item.source != Null || item.source != undefined || item.source == ''}}" class="firstnews-from">{{ item.source }}</view>
+        <view wx:else class="firstnews-from">{{ defaultSource }}</view>
         <view class="news-time">{{item.time}}</view>
       </view>
     </view>
-    <image class="news-pic" src="{{item.firstImage}}"></image>
+    <view wx:if="{{item.firstImage != Null || item.firstImage != undefined || item.firstImage == ''}}">
+      <image class="news-pic" src="{{item.firstImage}}" mode = "scaleToFill"></image>
+    </view>
+    <view wx:else>
+      <image class="news-pic" src="{{defaultImage}}" mode = "scaleToFill"></image>
+    </view>
   </view>
 </block>
 </view>

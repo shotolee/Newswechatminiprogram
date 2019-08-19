@@ -44,9 +44,18 @@
 
 .newsbody image {
   width: 100%;
-  margin-bottom: 40rpx;
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
 }
 
 .p {
   padding-bottom: 40rpx;
+}
+
+.p-strong {
+  padding-bottom: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  font-weight: bold;
 }
